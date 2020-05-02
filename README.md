@@ -21,9 +21,11 @@ Contract address: 0xf46273881ef705a0039356e001bfb12cb058c796
 
 # Libraries used
 
-Truffle v4.1.17 (because of required web3 version 0.*, 1.* is not supported)
+node `v12.16.1`
 
-web3 v0.20.7
+Truffle `v4.1.17` (because of required web3 version `0.*`. `1.*` is not supported)
+
+web3 `v0.20.7`
 
 # IPFS used
 
