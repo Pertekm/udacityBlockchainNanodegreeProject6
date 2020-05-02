@@ -160,7 +160,7 @@ contract SupplyChain {
     Item memory newItem = Item(
       sku, // generated
       _upc,
-      msg.sender, // owner
+      _originFarmerID, // owner
       _originFarmerID,
       _originFarmName,
       _originFarmInformation,
@@ -169,18 +169,18 @@ contract SupplyChain {
       _upc * 100 + sku, //productID: generated combination of upc + sku
       _productNotes,
       0, //productPrice
-      defaultState //itemState
-      //distributorID,
-      //retailerID,
-      //consumerID
+      defaultState, // itemState
+      address(0x0), // empty distributorID
+      address(0x0), // empty retailerID
+      address(0x0) // empty consumerID
     );
 
-    itmes[_upc] = newItem; // Creating in memory the Item -> upc mapping
+    items[_upc] = newItem; // Creating in memory the Item -> upc mapping
 
     // Increment sku
     sku = sku + 1;
     // Emit the appropriate event
-    event Harvested(_upc);
+    emit Harvested(_upc);
   }
 
   // Define a function 'processtItem' that allows a farmer to mark an item 'Processed'
@@ -295,19 +295,20 @@ contract SupplyChain {
   string  originFarmLongitude
   ) 
   {
-  // Assign values to the 8 parameters
-    
-  return 
-  (
-  itemSKU,
-  itemUPC,
-  ownerID,
-  originFarmerID,
-  originFarmName,
-  originFarmInformation,
-  originFarmLatitude,
-  originFarmLongitude
-  );
+    // Assign values to the 8 parameters
+    Item memory foundItem = items[_upc];
+
+    if(foundItem.upc == _upc) {
+    return (
+      foundItem.sku,
+      foundItem.upc,
+      foundItem.ownerID,
+      foundItem.originFarmerID,
+      foundItem.originFarmName,
+      foundItem.originFarmInformation,
+      foundItem.originFarmLatitude,
+      foundItem.originFarmLongitude );
+    }
   }
 
   // Define a function 'fetchItemBufferTwo' that fetches the data
@@ -325,19 +326,19 @@ contract SupplyChain {
   ) 
   {
     // Assign values to the 9 parameters
-  
-    
-  return 
-  (
-  itemSKU,
-  itemUPC,
-  productID,
-  productNotes,
-  productPrice,
-  itemState,
-  distributorID,
-  retailerID,
-  consumerID
-  );
+    Item memory foundItem = items[_upc];
+
+    if(foundItem.upc == _upc) { 
+      return (
+        foundItem.sku,
+        foundItem.upc,
+        foundItem.productID,
+        foundItem.productNotes,
+        foundItem.productPrice,
+        uint(foundItem.itemState),
+        foundItem.distributorID,
+        foundItem.retailerID,
+        foundItem.consumerID );
+    }
   }
 }
