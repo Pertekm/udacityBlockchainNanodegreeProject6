@@ -1,43 +1,42 @@
 # truffle migrate --reset --network rinkeby
 Using network 'rinkeby'.
 
-# Running migration: 1_initial_migration.js
-  Deploying Migrations...
-  ... 0x463bbbc1d92279218d6b0bff8f22633df694527431437a044a540878e7d89795
+## Running migration: 1_initial_migration.js
+  Replacing Migrations...
+  ... 0x7d748468f9eac9b1ff217a09f1d8184690fc3c4dd6d974a82f349db3a47e4dc3
   
-  Migrations: 0xf46273881ef705a0039356e001bfb12cb058c796
+  Migrations: 0xe95c3e52ef48c7da8bac280cc7f7f99698a3e3cb
 
 Saving successful migration to network...
-  ... 0x20aee24acb9f37b7dd03836604425b59585138dfce0e296c8abf7d603bb1a060
-
+  ... 0xa0a5c584762b1bc8ba3f1071c66b28b8740fa35cbb8774134de02cb9bfd45c81
 Saving artifacts...
-# Running migration: 2_deploy_contracts.js
-  Deploying FarmerRole...
-  ... 0x6234c75b9ebb95b2e9b4c0e1bb1d058227cf2a0b1e0749f752ed420818a58310
-  
-  FarmerRole: 0xda95238333e735f4c0efade71b7f583ccfd6cfa7
-  
-  Deploying DistributorRole...
-  ... 0xe72ccbec36df8ec25aabf9101fd6a453b7c650ccda826d6b1672f3d66a0c4450
-  
-  DistributorRole: 0xec6a2e3af06d928023e87e8fbca52ac44ff270fe
-  
-  Deploying RetailerRole...
-  ... 0xf12140cde60853f52ddd913133b4aa12e62876658889d6f722a881aa9ae7e2ec
-  
-  RetailerRole: 0x62f9b3caae225c03e98122ff4ce4e0b0aa8281bb
-  
-  Deploying ConsumerRole...
-  ... 0x8a5c3d29012a70061d8ba9cb425695de9108ef4cad0ee79c1a28d859af464986
-  
-  ConsumerRole: 0x39184c74e6d725b79cbd03cc883d8bab40d0a58e
-  
-  Deploying SupplyChain...
-  ... 0xc9ec721e1b1808c1a810597d8974789d7dc8c3a86ea8890114f39a47dad8255c
-  
-  SupplyChain: 0x0a2e61793698901d8c688c7ce92829424ee0bb56
+## Running migration: 2_deploy_contracts.js
+  Replacing FarmerRole...
+  ... 0x2cce86587d65a174c32405b32f2450c3fb52b6e4465f8606c8b6bb05519bfc19
+
+  FarmerRole: 0x8d51a2f58a1be52cd6a7f5a0a5f842a55356ba57
+
+  Replacing DistributorRole...
+  ... 0x5732779607ed58bb834bc6e599074e09c02e96a68fe8b009f1f6efbadb1de375
+
+  DistributorRole: 0x62d09f698c8afb777dcedbbfb9b78e49663e737c
+
+  Replacing RetailerRole...
+  ... 0xc5b432de910afca3578043e9fba5f59125d3cecd5a2aa8b1825feebed192470a
+
+  RetailerRole: 0x7d2b81588933177739bda8e4e12bcd5c77b4432e
+
+  Replacing ConsumerRole...
+  ... 0x30392d2fd23e6f50b2ad50774123049d65df7fbabfa5a0667bc154087adda424
+
+  ConsumerRole: 0xb9f238f958d745215efb4a5165162d0f7ddb534e
+
+  Replacing SupplyChain...
+  ... 0x411821974b2ffde3b70c1892b97b2cba2c3c169b5650a36ba821a8d1fb68d014
+
+  SupplyChain: 0xb8aa0ca5e3e87326663f813aeb68266b40e94bbf
 
 Saving successful migration to network...
-  ... 0xe884f630e2412d868ac487210f5f600184d0cbff5d18a6cdd2772034a2bc3268
+  ... 0x87e1a74553eab3720cb22dcb448d94a8a99904e68e185c5dcb7dd8421db706cb
 
 Saving artifacts...
