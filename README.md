@@ -1,3 +1,34 @@
+# General Write Up
+On Rinkeby Network:
+
+Transaction ID: 0xe884f630e2412d868ac487210f5f600184d0cbff5d18a6cdd2772034a2bc3268
+
+Contract address: 0xf46273881ef705a0039356e001bfb12cb058c796
+
+# UML diagrams
+
+## Activity
+![Activity](Project_write-up/Supply_Chain_UML_Acitivity.png)
+
+## Sequence
+![Sequence](Project_write-up/Supply_Chain_UML_Sequence.png)
+
+## State
+![State](Project_write-up/Supply_Chain_UML_State.png)
+
+## Classes (Data Model)
+![Classes (Data Model)](Project_write-up/Supply_Chain_UML_Class.png)
+
+# Libraries used
+
+Truffle v4.1.17 (because of required web3 version 0.*, 1.* is not supported)
+
+web3 v0.20.7
+
+# IPFS used
+
+No
+
 # Supply chain & data auditing
 
 This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
@@ -21,10 +52,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 Please make sure you've already installed ganache-cli, Truffle and enabled MetaMask extension in your browser.
 
-```
-Give examples (to be clarified)
-```
-
 ### Installing
 
 A step by step series of examples that tell you have to get a development env running
@@ -32,7 +59,7 @@ A step by step series of examples that tell you have to get a development env ru
 Clone this repository:
 
 ```
-git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
+git clone https://github.com/Pertekm/udacityBlockchainNanodegreeProject6.git
 ```
 
 Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):
@@ -92,19 +119,13 @@ npm run dev
 
 ## Built With
 
-* [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
-* [IPFS](https://ipfs.io/) - IPFS is the Distributed Web | A peer-to-peer hypermedia protocol
+* [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts in the language solidity
 to make the web faster, safer, and more open.
 * [Truffle Framework](http://truffleframework.com/) - Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.
 
-
-## Authors
-
-See also the list of [contributors](https://github.com/your/project/contributors.md) who participated in this project.
 
 ## Acknowledgments
 
 * Solidity
 * Ganache-cli
 * Truffle
-* IPFS
